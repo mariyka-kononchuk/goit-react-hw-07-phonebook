@@ -13,9 +13,9 @@ import {
 //import storage from 'redux-persist/lib/storage';
 import contactsReducer from './contacts/contacts-reducer';
 
-const myMiddleware = store => next => action => {
-    console.log('Моя прослойка')
-}
+// const myMiddleware = store => next => action => {
+//     console.log('Моя прослойка')
+// }
 
 //for watching prevState, action, nextState in console
 const middleware = [...getDefaultMiddleware({
@@ -23,7 +23,6 @@ const middleware = [...getDefaultMiddleware({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
     }
 }),
-    myMiddleware,
     logger]
 
 //localStorage
