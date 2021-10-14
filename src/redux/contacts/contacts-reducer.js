@@ -1,18 +1,17 @@
 //with Redux Toolkit
 import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit'
-import {fetchContacts} from './contacts-api'
-//import data from '../../../src/data/contacts.json';
+
 import {
-    addContactRequest,
+    //addContactRequest,
     addContactSuccess,
-    addContactError,
-    deleteContactRequest,
+    // addContactError,
+    // deleteContactRequest,
     deleteContactSuccess,
-    deleteContactError,
-    fetchContactRequest,
+    // deleteContactError,
+    // fetchContactRequest,
     fetchContactSuccess,
-    fetchContactError,
+    //etchContactError,
     changeFilter
 } from './contacts-action'
 
