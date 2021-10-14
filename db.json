@@ -1,64 +1,8 @@
 {
   "contacts": [
-    {
-      "id": "id-1",
-      "name": "Rosie Simpson",
-      "number": "459-12-56"
-    },
-    {
-      "id": "id-2",
-      "name": "Hermione Kline",
-      "number": "443-89-12"
-    },
-    {
-      "id": "id-3",
-      "name": "Eden Clements",
-      "number": "645-17-79"
-    },
-    {
-      "id": "id-4",
-      "name": "Annie Copeland",
-      "number": "227-91-26"
-    },
-    {
-      "name": "журба",
-      "number": "0976662233",
-      "id": "6-lQAgT"
-    },
-    {
-      "name": "журба",
-      "number": "0976662233",
-      "id": "lE7FnUF"
-    },
-    {
-      "name": "журба",
-      "number": "0976662233",
-      "id": "FarrD9b"
-    },
-    {
-      "name": "журба",
-      "number": "0976662233",
-      "id": "Ij6dHC0"
-    },
-    {
-      "name": "журба",
-      "number": "0976662233",
-      "id": "TzBAGSR"
-    },
-    {
-      "name": "журба",
-      "number": "0976662233",
-      "id": "8CcFe4h"
-    },
-    {
-      "name": "Rosie Simpson",
-      "number": "459-12-56",
-      "id": "x8fHzdh"
-    },
-    {
-      "name": "журба",
-      "number": "0976662233",
-      "id": "dthRfLt"
-    }
+    {"id": "id-1", "name": "Rosie Simpson", "number": "459-12-56"},
+    {"id": "id-2", "name": "Hermione Kline", "number": "443-89-12"},
+    {"id": "id-3", "name": "Eden Clements", "number": "645-17-79"},
+    {"id": "id-4", "name": "Annie Copeland", "number": "227-91-26"}
   ]
 }

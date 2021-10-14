@@ -5,10 +5,21 @@ import {
     addContactError,
     deleteContactRequest,
     deleteContactSuccess,
-    deleteContactError
+    deleteContactError,
+    fetchContactRequest,
+    fetchContactSuccess,
+    fetchContactError
 } from './contacts-action'
 
 axios.defaults.baseURL = 'http://localhost:4040';
+
+export const fetchContacts = () => dispatch => {
+    dispatch(fetchContactRequest());
+    axios
+        .get('/contacts')
+        .then(({ data }) => dispatch(fetchContactSuccess(data)))
+        .catch(error => dispatch(fetchContactError(error)))
+}
 
 export const addContact = ({ name, number }) => dispatch => {
     const contact = {

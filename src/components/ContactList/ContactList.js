@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+//import {fetchContacts} from '../../redux/contacts/contacts-operations'
 import s from './ContactList.module.css';
 import ContactListItem from '../ContactListItem';
+//import { fetchContactSuccess } from '../../redux/contacts/contacts-action';
+
 
 const ContactList = ({contacts}) => (
     <ul className={s.list}>
