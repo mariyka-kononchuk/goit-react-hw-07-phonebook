@@ -13,12 +13,17 @@ import {
 //import storage from 'redux-persist/lib/storage';
 import contactsReducer from './contacts/contacts-reducer';
 
+const myMiddleware = store => next => action => {
+    console.log('Моя прослойка')
+}
+
 //for watching prevState, action, nextState in console
 const middleware = [...getDefaultMiddleware({
     serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
     }
 }),
+    myMiddleware,
     logger]
 
 //localStorage
@@ -39,16 +44,7 @@ const store = configureStore({
     devTools: process.env.NODE_ENV === 'development',
 })
 //обертка над store, которая реализует обновление LocalStorage
-const persistor = persistStore(store);
+//const persistor = persistStore(store);
 
-export default { store, persistor };
+export default store;
 
-//without Redux Toolkit
-//import { combineReducers } from "redux";
-//import { composeWithDevTools } from 'redux-devtools-extension';
-
-// const rootReducer = combineReducers({
-//     contacts: contactsReducer
-// })
-
-//const store = createStore(rootReducer, composeWithDevTools());
