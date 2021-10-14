@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 //import {fetchContacts} from '../../redux/contacts/contacts-operations'
 import s from './ContactList.module.css';
 import ContactListItem from '../ContactListItem';
-//import { fetchContactSuccess } from '../../redux/contacts/contacts-action';
+import { getVisibleContacts } from '../../redux/contacts/contacts-selectors';
 
 
 const ContactList = ({contacts}) => (
@@ -17,15 +17,9 @@ const ContactList = ({contacts}) => (
     </ul>
 )
 
- const getVisibleContacts = (allContacts, filter) => {
-    const normilizedFilter = filter.toLowerCase();
-    return allContacts.filter(contact =>
-      contact.name.toLowerCase().includes(normilizedFilter));
-  }
-
-const mapStateToProps = ({contacts:{items, filter}}) => {
+const mapStateToProps = (state) => {
     return {
-        contacts: getVisibleContacts(items, filter)
+        contacts: getVisibleContacts(state)
     }
   }
 
