@@ -4,6 +4,7 @@ export const getContacts = state => state.contacts.items;
 
 export const getFilter = state => state.contacts.filter;
 
+//selector's memoization
 export const getVisibleContacts = createSelector(
     [getContacts, getFilter],
     //тело функции будет выполнено только если изменится contacts или filter
